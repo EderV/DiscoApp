@@ -13,8 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainScreen extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    int a;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

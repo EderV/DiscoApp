@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp;
+package com.app.a2.studio.android.app.disco.discoapp.Screens;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.app.a2.studio.android.app.disco.discoapp.R;
 
 public class MainScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

@@ -17,7 +17,7 @@ import com.app.a2.studio.android.app.disco.discoapp.R;
 
 public class MainScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    int a;
+    int a, b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

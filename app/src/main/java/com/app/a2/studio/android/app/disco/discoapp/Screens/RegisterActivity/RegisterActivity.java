@@ -14,6 +14,7 @@ import com.app.a2.studio.android.app.disco.discoapp.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    // Atributos
     private EditText mUsuario, mCorreo, mContrasena, mRepContrasena;
 
     @Override
@@ -21,10 +22,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // Buscamos los widgets por IDs
         findIDs();
+
+        // Inicializamos widgets
         inicialiceToolbar();
 
-
+        // Listeners de los editText que escuchan cuando el texto cambia
         mUsuarioChangeListener();
         mCorreoChangeListener();
         mContrasenaChangeListener();

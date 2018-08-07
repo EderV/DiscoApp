@@ -25,6 +25,7 @@ public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         TabVoteList.OnFragmentInteractionListener, TabAllSongsList.OnFragmentInteractionListener{
 
+    // Atributos
     private Toolbar mToolbar;
 
     @Override
@@ -32,6 +33,7 @@ public class MainScreen extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
 
+        // Inicializamos todos los widgets de la pantalla
         inicialiceToolbar();
         inicialiceFab();
         inicialiceDrawerLayout();

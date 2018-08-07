@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Screens;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.RegisterActivity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

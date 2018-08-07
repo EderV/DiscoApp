@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Screens;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.MainScreen;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,9 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.app.a2.studio.android.app.disco.discoapp.R;
-import com.app.a2.studio.android.app.disco.discoapp.Tabs.PageAdapter.PageAdapter;
-import com.app.a2.studio.android.app.disco.discoapp.Tabs.Tabs.TabAllSongsList;
-import com.app.a2.studio.android.app.disco.discoapp.Tabs.Tabs.TabVoteList;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.PageAdapter.PagerAdapter;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.Tabs.TabAllSongsList;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.Tabs.TabVoteList;
 
 public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -136,7 +136,7 @@ public class MainScreen extends AppCompatActivity
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.cms_viewPager);
-        final PageAdapter pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        final PagerAdapter pageAdapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 

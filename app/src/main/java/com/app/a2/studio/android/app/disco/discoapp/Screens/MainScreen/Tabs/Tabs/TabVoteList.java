@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Tabs.Tabs;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.Tabs;
 
 import android.content.Context;
 import android.net.Uri;
@@ -67,7 +67,7 @@ public class TabVoteList extends Fragment {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
 
-        return inflater.inflate(R.layout.design_recyclerview_1, container, false);
+        return inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

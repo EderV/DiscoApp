@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Tabs.Tabs;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.Tabs;
 
 import android.content.Context;
 import android.net.Uri;

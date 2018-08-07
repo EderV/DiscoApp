@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Screens;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.SplashScreen;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.app.a2.studio.android.app.disco.discoapp.DeteccionHomeBTN.HomeWatcher;
 import com.app.a2.studio.android.app.disco.discoapp.DeteccionHomeBTN.OnHomePressedListener;
 import com.app.a2.studio.android.app.disco.discoapp.R;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.MainScreen.MainScreen;
 
 public class SplashScreen extends AppCompatActivity {
 

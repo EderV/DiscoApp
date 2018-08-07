@@ -1,17 +1,17 @@
-package com.app.a2.studio.android.app.disco.discoapp.Tabs.PageAdapter;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.PageAdapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.app.a2.studio.android.app.disco.discoapp.Tabs.Tabs.TabAllSongsList;
-import com.app.a2.studio.android.app.disco.discoapp.Tabs.Tabs.TabVoteList;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.Tabs.TabAllSongsList;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Tabs.Tabs.TabVoteList;
 
-public class PageAdapter extends FragmentStatePagerAdapter{
+public class PagerAdapter extends FragmentStatePagerAdapter{
 
-    int mNumberOfTabs;
+    private int mNumberOfTabs;
 
-    public PageAdapter(FragmentManager fm, int numberOfTabs) {
+    public PagerAdapter(FragmentManager fm, int numberOfTabs) {
         super(fm);
         this.mNumberOfTabs = numberOfTabs;
     }

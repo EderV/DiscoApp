@@ -5,11 +5,13 @@ public class Musica {
     private String mSongName;
     private String mSongArtist;
     private int mSongImage;
+    private String mSongVotes;
 
-    public Musica(String songName, String songArtist, int songImage){
+    public Musica(String songName, String songArtist, int songImage, String songVotes){
         this.mSongName = songName;
         this.mSongArtist = songArtist;
         this.mSongImage = songImage;
+        this.mSongVotes = songVotes;
     }
 
     public void setSongName(String mSongName) {
@@ -24,6 +26,10 @@ public class Musica {
         this.mSongImage = mSongImage;
     }
 
+    public void setSongVotes(String mSongVotes) {
+        this.mSongVotes = mSongVotes;
+    }
+
     public String getSongName() {
         return mSongName;
     }
@@ -34,5 +40,9 @@ public class Musica {
 
     public int getSongImage() {
         return mSongImage;
+    }
+
+    public String getSongVotes() {
+        return mSongVotes;
     }
 }

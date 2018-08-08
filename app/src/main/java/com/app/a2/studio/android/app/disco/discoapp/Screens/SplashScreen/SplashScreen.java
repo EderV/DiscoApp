@@ -1,9 +1,12 @@
 package com.app.a2.studio.android.app.disco.discoapp.Screens.SplashScreen;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.app.a2.studio.android.app.disco.discoapp.DeteccionHomeBTN.HomeWatcher;
 import com.app.a2.studio.android.app.disco.discoapp.DeteccionHomeBTN.OnHomePressedListener;
@@ -19,7 +22,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         HomeWatcher mHomeWatcher = new HomeWatcher(this);
         mHomeWatcher.setOnHomePressedListener(new OnHomePressedListener() {

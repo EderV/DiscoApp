@@ -4,11 +4,18 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.a2.studio.android.app.disco.discoapp.R;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Musica.Musica;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter.MusicaVoteListAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +36,10 @@ public class TabVoteList extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mRVadaper;
+    private RecyclerView.LayoutManager mRVlManager;
 
     public TabVoteList() {
         // Required empty public constructor
@@ -62,12 +73,35 @@ public class TabVoteList extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
 
-        return inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
+
+        List<Musica> data = new ArrayList<>();
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+
+        mRecyclerView = view.findViewById(R.id.ftvl_RecyclerView);
+        mRecyclerView.setHasFixedSize(true);
+
+        mRVlManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(mRVlManager);
+
+        mRVadaper = new MusicaVoteListAdapter(data);
+        mRecyclerView.setAdapter(mRVadaper);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

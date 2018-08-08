@@ -17,13 +17,13 @@
         android:padding="@dimen/_4sdp">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/dlvsr_iv_SongImage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_95sdp"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/dlvsr_tv_SongTittle"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_28sdp"
             android:ellipsize="end"
@@ -34,13 +34,13 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/dlvsr_tv_SongSubtittle"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_15sdp"
-            android:gravity="center"
             android:ellipsize="end"
+            android:gravity="center"
             android:maxLines="1"
-            android:textSize="@dimen/_10sdp"
-            android:text="Text view subtittle" />
+            android:text="Text view subtittle"
+            android:textSize="@dimen/_10sdp" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

@@ -29,11 +29,18 @@ public class MainScreen extends AppCompatActivity
     // Atributos
     private Toolbar mToolbar;
 
+    private TabVoteList mTabVoteList;
+    private TabAllSongsList mTabAllSongsList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        // Instanciacion de objetos
+        mTabVoteList = new TabVoteList();
+        mTabAllSongsList = new TabAllSongsList();
 
         // Inicializamos todos los widgets de la pantalla
         inicialiceToolbar();
@@ -135,8 +142,8 @@ public class MainScreen extends AppCompatActivity
 
     private void inicialiceTabLayout(){
         TabLayout tabLayout = (TabLayout) findViewById(R.id.cms_tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
+        tabLayout.addTab(tabLayout.newTab().setText("Lista de votacion"));
+        tabLayout.addTab(tabLayout.newTab().setText("Todas canciones"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.cms_viewPager);

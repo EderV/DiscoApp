@@ -142,8 +142,8 @@ public class MainScreen extends AppCompatActivity
 
     private void inicialiceTabLayout(){
         TabLayout tabLayout = (TabLayout) findViewById(R.id.cms_tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Lista de votacion"));
-        tabLayout.addTab(tabLayout.newTab().setText("Todas canciones"));
+        tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab1_tittle)));
+        tabLayout.addTab(tabLayout.newTab().setText(getResources().getString(R.string.tab2_tittle)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.cms_viewPager);

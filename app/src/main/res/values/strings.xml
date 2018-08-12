@@ -19,4 +19,9 @@
     <string name="ar_RepetirContraseña">Repetir contraseña</string>
     <!-- -->
 
+    <!-- Tittle for tabs -->
+    <string name="tab1_tittle">Lista de votación</string>
+    <string name="tab2_tittle">Todas canciones</string>
+    <!-- -->
+
 </resources>

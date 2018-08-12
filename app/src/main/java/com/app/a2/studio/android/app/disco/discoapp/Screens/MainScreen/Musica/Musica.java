@@ -14,6 +14,12 @@ public class Musica {
         this.mSongVotes = songVotes;
     }
 
+    public Musica(String songName, String songArtist, int songImage){
+        this.mSongName = songName;
+        this.mSongArtist = songArtist;
+        this.mSongImage = songImage;
+    }
+
     public void setSongName(String mSongName) {
         this.mSongName = mSongName;
     }

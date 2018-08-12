@@ -4,11 +4,21 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import com.app.a2.studio.android.app.disco.discoapp.R;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Musica.Musica;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter.MusicaAllSongsAdapter;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.SnapHelper_for_RecyclerView.StartSnapHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +39,10 @@ public class TabAllSongsList extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mRVadaper;
+    private RecyclerView.LayoutManager mRVlManager;
 
     public TabAllSongsList() {
         // Required empty public constructor
@@ -62,11 +76,94 @@ public class TabAllSongsList extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_all_songs_list, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_tab_all_songs_list, container, false);
+
+        List<Musica> data = new ArrayList<>();
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background));
+
+        mRecyclerView = view.findViewById(R.id.ftasl_RecyclerView);
+        mRecyclerView.setHasFixedSize(true);
+
+        mRVlManager = new GridLayoutManager(getContext(), 2);
+        mRecyclerView.setLayoutManager(mRVlManager);
+
+        mRVadaper = new MusicaAllSongsAdapter(data);
+        mRecyclerView.setAdapter(mRVadaper);
+
+        StartSnapHelper startSnapHelper = new StartSnapHelper();
+        startSnapHelper.attachToRecyclerView(mRecyclerView);
+
+        fallDownAnimation();
+
+        return view;
     }
+
+    // Animacion para RecyclerView //
+    private void fallDownAnimation(){
+        int resId = R.anim.layout_animation_fall_down;
+        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(getContext(), resId);
+        mRecyclerView.setLayoutAnimation(animation);
+    }
+
+    // Metodo para repetir animacion
+    private void runLayoutAnimation(final RecyclerView recyclerView) {
+        final Context context = recyclerView.getContext();
+        final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down);
+
+        recyclerView.setLayoutAnimation(controller);
+        recyclerView.getAdapter().notifyDataSetChanged();
+        recyclerView.scheduleLayoutAnimation();
+    }
+    // *************************** //
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

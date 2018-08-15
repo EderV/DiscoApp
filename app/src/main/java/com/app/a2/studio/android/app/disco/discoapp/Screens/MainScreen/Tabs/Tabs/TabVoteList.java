@@ -13,8 +13,8 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 
 import com.app.a2.studio.android.app.disco.discoapp.R;
-import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Musica.Musica;
-import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter.MusicaVoteListAdapter;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Music.Music;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter.MusicVoteListAdapter;
 import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.SnapHelper_for_RecyclerView.StartSnapHelper;
 
 import java.util.ArrayList;
@@ -80,43 +80,43 @@ public class TabVoteList extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
 
-        List<Musica> data = new ArrayList<>();
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
-        data.add(new Musica("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        List<Music> data = new ArrayList<>();
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
+        data.add(new Music("Stamp on the ground", "Italo Brothers", R.drawable.ic_launcher_background, "0"));
 
 
 
@@ -126,7 +126,7 @@ public class TabVoteList extends Fragment {
         mRVlManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mRVlManager);
 
-        mRVadaper = new MusicaVoteListAdapter(data);
+        mRVadaper = new MusicVoteListAdapter(data);
         mRecyclerView.setAdapter(mRVadaper);
 
         StartSnapHelper startSnapHelper = new StartSnapHelper();
@@ -137,14 +137,14 @@ public class TabVoteList extends Fragment {
         return view;
     }
 
-    // Animacion para RecyclerView //
+    // Animation for RecyclerView //
     private void fallDownAnimation(){
         int resId = R.anim.layout_animation_fall_down;
         LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(getContext(), resId);
         mRecyclerView.setLayoutAnimation(animation);
     }
 
-    // Metodo para repetir animacion
+    // Method for repeat the animation
     private void runLayoutAnimation(final RecyclerView recyclerView) {
         final Context context = recyclerView.getContext();
         final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down);

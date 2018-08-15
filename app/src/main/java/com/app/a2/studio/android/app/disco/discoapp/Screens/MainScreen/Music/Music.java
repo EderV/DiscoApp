@@ -1,20 +1,20 @@
-package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Musica;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Music;
 
-public class Musica {
+public class Music {
 
     private String mSongName;
     private String mSongArtist;
     private int mSongImage;
     private String mSongVotes;
 
-    public Musica(String songName, String songArtist, int songImage, String songVotes){
+    public Music(String songName, String songArtist, int songImage, String songVotes){
         this.mSongName = songName;
         this.mSongArtist = songArtist;
         this.mSongImage = songImage;
         this.mSongVotes = songVotes;
     }
 
-    public Musica(String songName, String songArtist, int songImage){
+    public Music(String songName, String songArtist, int songImage){
         this.mSongName = songName;
         this.mSongArtist = songArtist;
         this.mSongImage = songImage;

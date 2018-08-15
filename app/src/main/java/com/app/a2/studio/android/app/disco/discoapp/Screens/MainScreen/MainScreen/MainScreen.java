@@ -1,5 +1,6 @@
 package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.MainScreen;
 
+import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -26,7 +28,7 @@ public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         TabVoteList.OnFragmentInteractionListener, TabAllSongsList.OnFragmentInteractionListener{
 
-    // Atributos
+    // Attributes
     private Toolbar mToolbar;
 
     private TabVoteList mTabVoteList;
@@ -38,11 +40,11 @@ public class MainScreen extends AppCompatActivity
         setContentView(R.layout.activity_main_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        // Instanciacion de objetos
+        // Instantiation of objects
         mTabVoteList = new TabVoteList();
         mTabAllSongsList = new TabAllSongsList();
 
-        // Inicializamos todos los widgets de la pantalla
+        // Inicialization of all widgets on screen
         inicialiceToolbar();
         inicialiceFab();
         inicialiceDrawerLayout();
@@ -167,5 +169,20 @@ public class MainScreen extends AppCompatActivity
 
             }
         });
+    }
+
+    private void createSimpleAlertDialog(String title, String body){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle(title);
+        dialog.setMessage(body);
+
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 }

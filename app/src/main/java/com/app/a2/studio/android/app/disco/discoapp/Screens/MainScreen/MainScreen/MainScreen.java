@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -156,7 +157,20 @@ public class MainScreen extends AppCompatActivity
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+
+                AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.cms_appBarLayout);
+
+                switch (tab.getPosition()){
+                    case 0:
+                        viewPager.setCurrentItem(0);
+                        appBarLayout.setExpanded(true, true);
+                        break;
+
+                    case 1:
+                        viewPager.setCurrentItem(1);
+                        appBarLayout.setExpanded(true, true);
+                        break;
+                }
             }
 
             @Override

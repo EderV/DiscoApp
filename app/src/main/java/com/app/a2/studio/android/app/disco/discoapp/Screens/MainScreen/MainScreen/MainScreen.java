@@ -163,7 +163,6 @@ public class MainScreen extends AppCompatActivity
             public void onTabSelected(TabLayout.Tab tab) {
 
                 AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.cms_appBarLayout);
-                AppBarLayout.LayoutParams layoutParams = (AppBarLayout.LayoutParams) mToolbar.getLayoutParams();
 
                 switch (tab.getPosition()){
                     case 0:

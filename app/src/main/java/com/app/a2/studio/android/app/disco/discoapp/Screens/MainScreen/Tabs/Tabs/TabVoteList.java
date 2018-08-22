@@ -155,6 +155,14 @@ public class TabVoteList extends Fragment {
     }
     // *************************** //
 
+    // Check if recyclerview is scrollable
+    public boolean isRecyclerScrollable() {
+        LinearLayoutManager layoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
+        RecyclerView.Adapter adapter = mRecyclerView.getAdapter();
+        return ((layoutManager != null && adapter != null) &&
+                (layoutManager.findLastCompletelyVisibleItemPosition() < adapter.getItemCount() - 1));
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

@@ -1,5 +1,6 @@
 package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.MainScreen;
 
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -32,6 +33,7 @@ public class MainScreen extends AppCompatActivity
     // Attributes
     private Toolbar mToolbar;
 
+    // Fragments
     private TabVoteList mTabVoteList;
     private TabAllSongsList mTabAllSongsList;
 
@@ -41,9 +43,11 @@ public class MainScreen extends AppCompatActivity
         setContentView(R.layout.activity_main_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        // Instantiation of Fragments
+        mTabVoteList = TabVoteList.newInstance("someThing1", "someThing2");
+        mTabAllSongsList = TabAllSongsList.newInstance("someThing1", "someThing2");
+
         // Instantiation of objects
-        mTabVoteList = new TabVoteList();
-        mTabAllSongsList = new TabAllSongsList();
 
         // Inicialization of all widgets on screen
         inicialiceToolbar();
@@ -159,6 +163,7 @@ public class MainScreen extends AppCompatActivity
             public void onTabSelected(TabLayout.Tab tab) {
 
                 AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.cms_appBarLayout);
+                AppBarLayout.LayoutParams layoutParams = (AppBarLayout.LayoutParams) mToolbar.getLayoutParams();
 
                 switch (tab.getPosition()){
                     case 0:

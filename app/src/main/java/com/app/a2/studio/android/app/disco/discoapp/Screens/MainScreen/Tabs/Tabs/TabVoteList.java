@@ -43,6 +43,7 @@ public class TabVoteList extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mRVadaper;
     private RecyclerView.LayoutManager mRVlManager;
+    private static TabVoteList SigleTabVoteList = null;
 
     public TabVoteList() {
         // Required empty public constructor
@@ -58,12 +59,14 @@ public class TabVoteList extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static TabVoteList newInstance(String param1, String param2) {
-        TabVoteList fragment = new TabVoteList();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+        if (SigleTabVoteList == null) {
+            SigleTabVoteList = new TabVoteList();
+            Bundle args = new Bundle();
+            args.putString(ARG_PARAM1, param1);
+            args.putString(ARG_PARAM2, param2);
+            SigleTabVoteList.setArguments(args);
+        }
+        return SigleTabVoteList;
     }
 
     @Override
@@ -157,6 +160,7 @@ public class TabVoteList extends Fragment {
 
     // Check if recyclerview is scrollable
     public boolean isRecyclerScrollable() {
+
         LinearLayoutManager layoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
         RecyclerView.Adapter adapter = mRecyclerView.getAdapter();
         return ((layoutManager != null && adapter != null) &&

@@ -167,6 +167,7 @@ public class MainScreen extends AppCompatActivity
                 switch (tab.getPosition()){
                     case 0:
                         viewPager.setCurrentItem(0);
+                        TabVoteList.newInstance(null,null).isRecyclerScrollable();
                         appBarLayout.setExpanded(true, true);
                         break;
 

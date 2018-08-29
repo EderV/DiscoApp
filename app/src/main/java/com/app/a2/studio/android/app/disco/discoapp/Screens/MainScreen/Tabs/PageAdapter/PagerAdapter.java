@@ -20,11 +20,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return TabVoteList.newInstance(null,null);
+                return TabVoteList.newInstance(null, null);
 
             case 1:
-                TabAllSongsList tabAllSongsList = new TabAllSongsList();
-                return tabAllSongsList;
+                return TabAllSongsList.newInstance(null, null);
 
             default:
                 return null;

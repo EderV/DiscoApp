@@ -179,17 +179,17 @@ public class MainScreen extends AppCompatActivity
                         viewPager.setCurrentItem(1);
                         appBarLayout.setExpanded(true, true);
 
-                        //if (!TabAllSongsList.newInstance(null, null).isRecyclerScrollable()){
-                        //    mToolbarLayoutParams.setScrollFlags(0);
-                        //    mToolbar.setLayoutParams(mToolbarLayoutParams);
-                        //}
-                        //else {
-                        //    mToolbarLayoutParams.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
-                        //            | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
-                        //            | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
-                        //    mToolbar.setLayoutParams(mToolbarLayoutParams);
-                        //}
-                        //break;
+                        if (!TabAllSongsList.newInstance(null, null).isRecyclerScrollable()){
+                            mToolbarLayoutParams.setScrollFlags(0);
+                            mToolbar.setLayoutParams(mToolbarLayoutParams);
+                        }
+                        else {
+                            mToolbarLayoutParams.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
+                                    | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
+                                    | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
+                            mToolbar.setLayoutParams(mToolbarLayoutParams);
+                        }
+                        break;
                 }
             }
 

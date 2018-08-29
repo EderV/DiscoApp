@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,7 @@ public class TabAllSongsList extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mRVadaper;
     private RecyclerView.LayoutManager mRVlManager;
+    private static TabAllSongsList SingleTablAllSongsList = null;
 
     public TabAllSongsList() {
         // Required empty public constructor
@@ -58,12 +60,15 @@ public class TabAllSongsList extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static TabAllSongsList newInstance(String param1, String param2) {
-        TabAllSongsList fragment = new TabAllSongsList();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+        // Singleton
+        if (SingleTablAllSongsList == null) {
+            SingleTablAllSongsList = new TabAllSongsList();
+            Bundle args = new Bundle();
+            args.putString(ARG_PARAM1, param1);
+            args.putString(ARG_PARAM2, param2);
+            SingleTablAllSongsList.setArguments(args);
+        }
+        return SingleTablAllSongsList;
     }
 
     @Override
@@ -164,6 +169,14 @@ public class TabAllSongsList extends Fragment {
         recyclerView.scheduleLayoutAnimation();
     }
     // *************************** //
+
+    // Check if recyclerview is scrollable
+    public boolean isRecyclerScrollable() {
+        LinearLayoutManager layoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
+        RecyclerView.Adapter adapter = mRecyclerView.getAdapter();
+        return ((layoutManager != null && adapter != null) &&
+                (layoutManager.findLastCompletelyVisibleItemPosition() < adapter.getItemCount() - 1));
+    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

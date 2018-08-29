@@ -33,19 +33,11 @@ public class MainScreen extends AppCompatActivity
     // Attributes
     private Toolbar mToolbar;
 
-    // Fragments
-    private TabVoteList mTabVoteList;
-    private TabAllSongsList mTabAllSongsList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        // Instantiation of Fragments
-        mTabVoteList = TabVoteList.newInstance("someThing1", "someThing2");
-        mTabAllSongsList = TabAllSongsList.newInstance("someThing1", "someThing2");
 
         // Instantiation of objects
 
@@ -163,18 +155,41 @@ public class MainScreen extends AppCompatActivity
             public void onTabSelected(TabLayout.Tab tab) {
 
                 AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.cms_appBarLayout);
+                AppBarLayout.LayoutParams mToolbarLayoutParams = (AppBarLayout.LayoutParams) mToolbar.getLayoutParams();
 
                 switch (tab.getPosition()){
                     case 0:
                         viewPager.setCurrentItem(0);
-                        TabVoteList.newInstance(null,null).isRecyclerScrollable();
                         appBarLayout.setExpanded(true, true);
+
+                        if (!TabVoteList.newInstance(null, null).isRecyclerScrollable()){
+                            mToolbarLayoutParams.setScrollFlags(0);
+                            mToolbar.setLayoutParams(mToolbarLayoutParams);
+                        }
+                        else {
+                            mToolbarLayoutParams.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
+                                    | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
+                                    | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
+                            mToolbar.setLayoutParams(mToolbarLayoutParams);
+                        }
+
                         break;
 
                     case 1:
                         viewPager.setCurrentItem(1);
                         appBarLayout.setExpanded(true, true);
-                        break;
+
+                        //if (!TabAllSongsList.newInstance(null, null).isRecyclerScrollable()){
+                        //    mToolbarLayoutParams.setScrollFlags(0);
+                        //    mToolbar.setLayoutParams(mToolbarLayoutParams);
+                        //}
+                        //else {
+                        //    mToolbarLayoutParams.setScrollFlags(AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL
+                        //            | AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
+                        //            | AppBarLayout.LayoutParams.SCROLL_FLAG_SNAP);
+                        //    mToolbar.setLayoutParams(mToolbarLayoutParams);
+                        //}
+                        //break;
                 }
             }
 

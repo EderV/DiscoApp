@@ -149,13 +149,13 @@ public class TabVoteList extends Fragment {
     }
 
     // Method for repeat the animation
-    private void runLayoutAnimation(final RecyclerView recyclerView) {
-        final Context context = recyclerView.getContext();
+    public void runRecyclerViewLayoutAnimation() {
+        final Context context = mRecyclerView.getContext();
         final LayoutAnimationController controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down);
 
-        recyclerView.setLayoutAnimation(controller);
-        recyclerView.getAdapter().notifyDataSetChanged();
-        recyclerView.scheduleLayoutAnimation();
+        mRecyclerView.setLayoutAnimation(controller);
+        mRecyclerView.getAdapter().notifyDataSetChanged();
+        mRecyclerView.scheduleLayoutAnimation();
     }
     // *************************** //
 

@@ -32,12 +32,18 @@ public class MainScreen extends AppCompatActivity
 
     // Attributes
     private Toolbar mToolbar;
+    private TabVoteList mTabVoteList;
+    private TabAllSongsList mTabAllSongsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        // Instantiation of fragments
+        mTabVoteList = TabVoteList.newInstance(null, null);
+        mTabAllSongsList = TabAllSongsList.newInstance(null, null);
 
         // Instantiation of objects
 
@@ -162,7 +168,9 @@ public class MainScreen extends AppCompatActivity
                         viewPager.setCurrentItem(0);
                         appBarLayout.setExpanded(true, true);
 
-                        if (!TabVoteList.newInstance(null, null).isRecyclerScrollable()){
+                        mTabAllSongsList.scrollRecyclerViewToPosition(0);
+
+                        if (!mTabVoteList.isRecyclerScrollable()){
                             mToolbarLayoutParams.setScrollFlags(0);
                             mToolbar.setLayoutParams(mToolbarLayoutParams);
                         }
@@ -179,7 +187,9 @@ public class MainScreen extends AppCompatActivity
                         viewPager.setCurrentItem(1);
                         appBarLayout.setExpanded(true, true);
 
-                        if (!TabAllSongsList.newInstance(null, null).isRecyclerScrollable()){
+                        mTabVoteList.scrollRecyclerViewToPosition(0);
+
+                        if (!mTabAllSongsList.isRecyclerScrollable()){
                             mToolbarLayoutParams.setScrollFlags(0);
                             mToolbar.setLayoutParams(mToolbarLayoutParams);
                         }

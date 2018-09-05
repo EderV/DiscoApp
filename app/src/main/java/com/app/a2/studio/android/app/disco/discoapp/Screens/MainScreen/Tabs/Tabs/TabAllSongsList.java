@@ -178,6 +178,12 @@ public class TabAllSongsList extends Fragment {
                 (layoutManager.findLastCompletelyVisibleItemPosition() < adapter.getItemCount() - 1));
     }
 
+    // Scroll the recyclerview to given position
+    public void scrollRecyclerViewToPosition(int position){
+        LinearLayoutManager layoutManager = (LinearLayoutManager) mRecyclerView.getLayoutManager();
+        layoutManager.scrollToPosition(position);
+    }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

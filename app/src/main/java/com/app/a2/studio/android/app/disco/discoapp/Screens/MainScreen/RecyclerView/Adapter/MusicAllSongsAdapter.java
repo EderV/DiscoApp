@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

@@ -1,4 +1,4 @@
-package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.SnapHelper_for_RecyclerView;
+package com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.SnapHelper;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

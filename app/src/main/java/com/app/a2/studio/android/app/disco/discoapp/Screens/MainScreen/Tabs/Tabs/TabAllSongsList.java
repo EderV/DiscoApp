@@ -15,8 +15,8 @@ import android.view.animation.LayoutAnimationController;
 
 import com.app.a2.studio.android.app.disco.discoapp.R;
 import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Music.Music;
-import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter.MusicAllSongsAdapter;
-import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.SnapHelper_for_RecyclerView.StartSnapHelper;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.Adapter.MusicAllSongsAdapter;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.SnapHelper.StartSnapHelper;
 
 import java.util.ArrayList;
 import java.util.List;

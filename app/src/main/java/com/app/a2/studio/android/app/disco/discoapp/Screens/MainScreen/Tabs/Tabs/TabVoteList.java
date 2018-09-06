@@ -11,11 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.Toast;
 
 import com.app.a2.studio.android.app.disco.discoapp.R;
 import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.Music.Music;
-import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView_Adapter.MusicVoteListAdapter;
-import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.SnapHelper_for_RecyclerView.StartSnapHelper;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.Adapter.MusicVoteListAdapter;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.OnItemClickListener.RecyclerTouchListener;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.OnItemClickListener.RecyclerViewClickListener;
+import com.app.a2.studio.android.app.disco.discoapp.Screens.MainScreen.RecyclerView.SnapHelper.StartSnapHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,8 +140,23 @@ public class TabVoteList extends Fragment {
         startSnapHelper.attachToRecyclerView(mRecyclerView);
 
         fallDownAnimation();
+        recyclerViewOnItemTouchListener();
 
         return view;
+    }
+
+    private void recyclerViewOnItemTouchListener(){
+        mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(getContext(), mRecyclerView, new RecyclerViewClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                Toast.makeText(getActivity(), "Single click at position: " + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(View v, int position) {
+                Toast.makeText(getActivity(), "Long click at position: " + position, Toast.LENGTH_SHORT).show();
+            }
+        }));
     }
 
     // Animation for RecyclerView //

@@ -35,6 +35,9 @@ public class MainScreen extends AppCompatActivity
     private TabVoteList mTabVoteList;
     private TabAllSongsList mTabAllSongsList;
 
+    private AppBarLayout appBarLayout;
+    private AppBarLayout.LayoutParams mToolbarLayoutParams;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +124,9 @@ public class MainScreen extends AppCompatActivity
     private void inicialiceToolbar(){
         mToolbar = (Toolbar) findViewById(R.id.cms_toolbar);
         setSupportActionBar(mToolbar);
+
+        appBarLayout = (AppBarLayout) findViewById(R.id.cms_appBarLayout);
+        mToolbarLayoutParams = (AppBarLayout.LayoutParams) mToolbar.getLayoutParams();
     }
 
     private void inicialiceFab(){
@@ -128,7 +134,13 @@ public class MainScreen extends AppCompatActivity
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                appBarLayout.setExpanded(true, true);
+
+                mTabVoteList.scrollRecyclerViewToPosition(0);
+                mTabVoteList.runRecyclerViewLayoutAnimation();
+
+                mTabAllSongsList.scrollRecyclerViewToPosition(0);
+                mTabAllSongsList.runRecyclerViewLayoutAnimation();
             }
         });
     }
@@ -159,9 +171,6 @@ public class MainScreen extends AppCompatActivity
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
-                AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.cms_appBarLayout);
-                AppBarLayout.LayoutParams mToolbarLayoutParams = (AppBarLayout.LayoutParams) mToolbar.getLayoutParams();
 
                 switch (tab.getPosition()){
                     case 0:

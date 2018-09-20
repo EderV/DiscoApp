@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/dasr_iv_SongImage"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_95sdp"
+            android:layout_width="@dimen/_136sdp"
+            android:layout_height="@dimen/_94sdp"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
@@ -41,6 +41,6 @@
             android:gravity="center"
             android:maxLines="1"
             android:text="Text view subtittle"
-            android:textSize="@dimen/_10sdp" />
+            android:textSize="@dimen/_10ssp" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

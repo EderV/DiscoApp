@@ -88,43 +88,10 @@ public class TabVoteList extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tab_vote_list, container, false);
 
         List<Music> data = new ArrayList<>();
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
-        data.add(new Music("Du hast", "Ramstein", R.drawable.ic_launcher_background, "0"));
 
+        for (int i = 0; i< 30; i++){
+            data.add(new Music("Levels", "Avicii", R.drawable.ic_launcher_background, "0"));
+        }
 
 
         mRecyclerView = view.findViewById(R.id.ftvl_RecyclerView);
